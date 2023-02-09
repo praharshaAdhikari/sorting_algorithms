@@ -131,19 +131,19 @@ const Home = () => {
 			</div>
 			<div className="mx-auto pt-7 xl:w-3/4 xsm:w-5/6 flex justify-around items-center">
 				<button 
-					className="xl:w-32 xl:h-10 xsm:w-24 xsm:h-8 xsm:text-xs rounded-md bg-yellow-500 text-transform: uppercase text-stone-900 font-bold duration-100 hover:-translate-y-0.5 hover:drop-shadow-sort hover:scale-105 active:translate-y-0.5 active:drop-shadow-none"
+					className="xl:w-32 xl:h-10 xsm:w-24 xsm:h-8 xsm:text-xs xl:text-sm rounded-md bg-yellow-500 text-transform: uppercase text-stone-900 font-bold duration-100 hover:-translate-y-0.5 hover:drop-shadow-sort hover:scale-105 active:translate-y-0.5 active:drop-shadow-none"
 					onClick={bubbleSort}
 				>
 					<span>Bubble Sort</span>
 				</button>
 				<button 
-					className="xl:w-32 xl:h-10 xsm:w-24 xsm:h-8 xsm:text-xs rounded-md bg-yellow-500 text-transform: uppercase text-stone-900 font-bold duration-100 hover:-translate-y-0.5 hover:drop-shadow-sort hover:scale-105 active:translate-y-0.5 active:drop-shadow-none"
+					className="xl:w-32 xl:h-10 xsm:w-24 xsm:h-8 xsm:text-xs xl:text-sm rounded-md bg-yellow-500 text-transform: uppercase text-stone-900 font-bold duration-100 hover:-translate-y-0.5 hover:drop-shadow-sort hover:scale-105 active:translate-y-0.5 active:drop-shadow-none"
 					onClick={() => {quickSort(0, barsArray.current.length - 1)}}
 				>
 					Quick Sort
 				</button>
 				<button 
-					className="xl:w-32 xl:h-10 xsm:w-24 xsm:h-8 xsm:text-xs rounded-md bg-red-600 text-transform: uppercase text-stone-900 font-bold duration-100 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:drop-shadow-sort hover:scale-105 active:translate-x-0.5 active:translate-y-0.5 active:drop-shadow-none"
+					className="xl:w-32 xl:h-10 xsm:w-24 xsm:h-8 xsm:text-xs xl:text-sm rounded-md bg-red-600 text-transform: uppercase text-stone-900 font-bold duration-100 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:drop-shadow-sort hover:scale-105 active:translate-x-0.5 active:translate-y-0.5 active:drop-shadow-none"
 					onClick={newArrayGenerator}
 				>
 					Randomize
