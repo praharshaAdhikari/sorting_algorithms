@@ -1,9 +1,11 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import Bar from "./Bar.jsx";
+import windowDimensions from "./windowDimensions";
 
-const Home = ()=> {
-    const totalBars = 400;
+const Home = () => {
+	const { width, height } = windowDimensions();
+  const totalBars = width > 393 ? 400 : 200;
 	let barsArray = useRef([]);
 
 	const [BarEl, setBarEl] = useState();
@@ -124,24 +126,24 @@ const Home = ()=> {
 
 	return (
 		<div className="h-page pt-20" id="home">
-			<div className="pt-9 flex justify-center items-end">
+			<div className="xl:pt-9 xsm:pt-2 flex xl:flex-row xl:justify-center xl:items-end xsm:flex-col xsm:items-center xsm: justify-end">
 				{BarEl}
 			</div>
-			<div className="mx-auto pt-7 w-3/4 flex justify-around items-center">
+			<div className="mx-auto pt-7 xl:w-3/4 xsm:w-5/6 flex justify-around items-center">
 				<button 
-					className="w-32 h-10 rounded-md bg-yellow-500 text-transform: uppercase text-stone-900 font-bold duration-100 hover:-translate-y-0.5 hover:drop-shadow-sort hover:scale-105 active:translate-y-0.5 active:drop-shadow-none"
+					className="xl:w-32 xl:h-10 xsm:w-24 xsm:h-8 xsm:text-xs rounded-md bg-yellow-500 text-transform: uppercase text-stone-900 font-bold duration-100 hover:-translate-y-0.5 hover:drop-shadow-sort hover:scale-105 active:translate-y-0.5 active:drop-shadow-none"
 					onClick={bubbleSort}
 				>
 					<span>Bubble Sort</span>
 				</button>
 				<button 
-					className="w-32 h-10 rounded-md bg-yellow-500 text-transform: uppercase text-stone-900 font-bold duration-100 hover:-translate-y-0.5 hover:drop-shadow-sort hover:scale-105 active:translate-y-0.5 active:drop-shadow-none"
+					className="xl:w-32 xl:h-10 xsm:w-24 xsm:h-8 xsm:text-xs rounded-md bg-yellow-500 text-transform: uppercase text-stone-900 font-bold duration-100 hover:-translate-y-0.5 hover:drop-shadow-sort hover:scale-105 active:translate-y-0.5 active:drop-shadow-none"
 					onClick={() => {quickSort(0, barsArray.current.length - 1)}}
 				>
 					Quick Sort
 				</button>
 				<button 
-					className="w-32 h-10 rounded-md bg-red-600 text-transform: uppercase text-stone-900 font-bold duration-100 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:drop-shadow-sort hover:scale-105 active:translate-x-0.5 active:translate-y-0.5 active:drop-shadow-none"
+					className="xl:w-32 xl:h-10 xsm:w-24 xsm:h-8 xsm:text-xs rounded-md bg-red-600 text-transform: uppercase text-stone-900 font-bold duration-100 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:drop-shadow-sort hover:scale-105 active:translate-x-0.5 active:translate-y-0.5 active:drop-shadow-none"
 					onClick={newArrayGenerator}
 				>
 					Randomize

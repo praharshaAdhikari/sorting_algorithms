@@ -9,6 +9,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        "xsm": "393px"
+      },
       fontFamily: {
         serif: ['var(--font-kelly-slab)', ...defaultTheme.fontFamily.serif],
       },

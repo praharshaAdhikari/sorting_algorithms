@@ -10,10 +10,11 @@ const Page = ()=> {
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [])
+  }, []);
   const handleScroll = () => {
     window.scrollY > 0 ? setIsScrolled(true) : setIsScrolled(false);
-  }
+  };
+
   return(
     <div className= "bg-neutral-900 scroll-smooth">
       <Navbar scrolled = {isScrolled}/>
